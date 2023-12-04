@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{%block title%}<title>Expensive Items</title>{%endblock%}
+
+{% block content %}
+<main class="add">
+
+  <form method="post" enctype="multipart/form-data">
+    {{ add_form }}
+    {% csrf_token %}
+
+    <input type="submit" value="Добавить товар">
+</form>
+
+</main>
+{% endblock %}
